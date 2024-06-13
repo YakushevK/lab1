@@ -40,7 +40,7 @@ namespace lab1
                 var destImage = tempImage.PyrUp();
                 Image<Gray, byte> cannyEdges = destImage.Canny(cannyThreshold, cannyThresholdLinking);
                 imageBox3.SizeMode = PictureBoxSizeMode.Zoom;
-                //imageBox3.Image = cannyEdges;
+        
 
                 var cannyEdgesBgr = cannyEdges.Convert<Bgr, byte>();
                 var resultImage = sourceImage.Sub(cannyEdgesBgr); // попиксельное вычитание
